@@ -1,11 +1,16 @@
-import React from 'react';
+import React, {useState} from 'react';
 import './App.css';
-
+import Parent from './Parent';
+import CContext from './CContext';
 function App() {
+let countstate= useState(0)
+//let [count, SetCount] = useState(35)
   return (
-    <div className="App">
-      
+    <CContext.Provider value={countstate}>
+    <div>
+      <Parent />
     </div>
+    </CContext.Provider>
   );
 }
 
